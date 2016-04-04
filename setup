@@ -46,6 +46,7 @@ ln -sf "$(pwd)/ctags/ctags" "$HOME/.ctags"
 ln -sf "$(pwd)/slate/slate.js" "$HOME/.slate.js"
 ln -sf "$(pwd)/git/gitignore_global" "$HOME/.gitignore_global"
 ln -sf "$(pwd)/git/gitconfig" "$HOME/.gitconfig"
+ln -sf "$(pwd)/zsh/elijah.zsh-theme" "$HOME/.oh-my-zsh/themes"
 
 # install Vundle plugins
 vim +PluginInstall +qall
