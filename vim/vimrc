@@ -68,6 +68,8 @@ Plugin 'wting/rust.vim'
 
 Plugin 'jimenezrick/vimerl'
 
+Plugin 'fatih/vim-go'
+
 " if has("gui_running")
 "   Plugin 'Valloric/YouCompleteMe'
 "   let g:clang_user_options='|| exit 0'
@@ -78,14 +80,28 @@ Bundle 'solarnz/thrift.vim'
 Bundle "motus/pig.vim"
 
 
-Plugin 'fatih/vim-go'
-
 call vundle#end()
 filetype plugin indent on
 " ***********************
 
+" Enable NeoComplete
+let g:neocomplete#enable_at_startup = 1
+
+" vim-go settings
+syntax enable  
+filetype plugin on  
+set number  
+let g:go_disable_autoinstall = 0
+
+" Go Highlight
+let g:go_highlight_functions = 1  
+let g:go_highlight_methods = 1  
+let g:go_highlight_structs = 1  
+let g:go_highlight_operators = 1  
+let g:go_highlight_build_constraints = 1 
+
 syntax on
-colorscheme jellybeans
+colorscheme molokai
 " Make SignColumn same as background color
 highlight LineNr guibg='#1c1c1c'
 highlight CursorLineNr guibg='#1c1c1c'
@@ -196,6 +212,7 @@ map <leader>n :bn<cr>
 map <leader>p :bp<cr>
 map <leader>d :bd<cr>
 map <leader><leader> <C-^>
+
 
 set cc=80
 " Toggle cc

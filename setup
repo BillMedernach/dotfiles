@@ -1,4 +1,4 @@
-#! /bin/bash
+# /bin/bash
 
 set -e
 
@@ -33,9 +33,16 @@ if [ "$changed_file_exists" = true ]; then
   fi
 fi
 
-# Install Vundle
 set +e
+# Install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim &> /dev/null
+sh ~/dotfiles/vim/.vim_go_runtime/bin/install
+# Install molokai theme
+git clone git@github.com:fatih/molokai.git ~/dotfiles/vim/molokai &> /dev/null
+mkdir -p ~/dotfiles/vim/colors
+cp ~/dotfiles/vim/molokai/colors/molokai.vim ~/dotfiles/vim/colors/molokai.vim
+# Install NeoComplete
+git clone https://github.com/Shougo/neocomplete.vim.git ~/dotfiles/vim/bundle/neocomplete &> /dev/null
 set -e
 
 # create symlinks
@@ -46,7 +53,6 @@ ln -sf "$(pwd)/ctags/ctags" "$HOME/.ctags"
 ln -sf "$(pwd)/slate/slate.js" "$HOME/.slate.js"
 ln -sf "$(pwd)/git/gitignore_global" "$HOME/.gitignore_global"
 ln -sf "$(pwd)/git/gitconfig" "$HOME/.gitconfig"
-ln -sf "$(pwd)/zsh/elijah.zsh-theme" "$HOME/.oh-my-zsh/themes"
 
 # install Vundle plugins
 vim +PluginInstall +qall

@@ -1,8 +1,8 @@
 [user]
-	name = Elijah Andrews
-	email = elijahcandrews@gmail.com
+	name = Bill Medernach
+	email = bill.medernach@gmail.com
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/elijah/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
