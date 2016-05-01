@@ -70,11 +70,6 @@ Plugin 'jimenezrick/vimerl'
 
 Plugin 'fatih/vim-go'
 
-" if has("gui_running")
-"   Plugin 'Valloric/YouCompleteMe'
-"   let g:clang_user_options='|| exit 0'
-" endif
-
 Bundle 'solarnz/thrift.vim'
 
 Bundle "motus/pig.vim"
